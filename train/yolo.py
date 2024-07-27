@@ -7,7 +7,7 @@ def train():
 
 def export():
     model = YOLO("model.pt")
-    model.export(format='torchscript')
+    model.export(format='onnx')
 
 if __name__ == "__main__":
     export()

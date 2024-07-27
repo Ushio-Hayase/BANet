@@ -2,9 +2,9 @@ from ultralytics import YOLO
 
 
 def main():
-    model = YOLO("src/best.pt")
+    model = YOLO("model.pt")
 
-    outs = model(["src/test.jpg", "src/test1.jpg", "src/test2.jpg", "src/test3.jpg"])
+    outs = model(["src/test.jpg"])
     for out in outs:
         print(model.names[out.probs.top1])
         print(out.probs.top1conf.item())
